@@ -1,16 +1,16 @@
 def solution(name, yearning, photo):
     answer = []
     
-    dict = {}
-    
+    score_map = {}
     for i in range(len(name)):
-        dict[name[i]] = yearning[i]
+        score_map[name[i]] = yearning[i]
     
     for names in photo:
         total = 0
+        
         for name in names:
-            total += dict.get(name, 0)
-
+            total += score_map.get(name, 0)
+            
         answer.append(total)
         
     return answer
