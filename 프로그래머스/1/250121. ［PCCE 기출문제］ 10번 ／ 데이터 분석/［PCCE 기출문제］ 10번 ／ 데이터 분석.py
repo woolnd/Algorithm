@@ -1,5 +1,5 @@
 def solution(data, ext, val_ext, sort_by):
-    answer = [[]]
+    answer = []
 
     if ext == 'code':
         mask = 0
@@ -23,7 +23,6 @@ def solution(data, ext, val_ext, sort_by):
     else:
         mask = 3
         
-    answer = list(filter(None, answer))
     answer.sort(key=lambda x: x[mask])
     
     return answer
